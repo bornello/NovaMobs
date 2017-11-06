@@ -122,7 +122,7 @@ public class NovaMobs extends PluginBase implements Listener {
                 Config.YAML,
                 new LinkedHashMap<String, Object>() {
             {
-                put("worlds-spawn-disabled", new ArrayList());
+                put("worlds-spawn-disabled", new ArrayList<String>());
                 put("spawn-animals", true);
                 put("spawn-mobs", true);
                 put("auto-spawn-tick", 20);
@@ -136,6 +136,8 @@ public class NovaMobs extends PluginBase implements Listener {
 
             timer.schedule(new AutoSpawnTask(this), 10000, 1000);
         }
+
+        this.disabledWorlds = config.getStringList("worlds-spawn-disabled", new ArrayList<String>());
 
         for (Level level : Server.getInstance().getLevels().values()) {
             if (disabledWorlds.contains(level.getFolderName().toLowerCase())) {
