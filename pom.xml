@@ -29,7 +29,7 @@
         <repository>
             <id>nukkit-repo</id>
 		<!-- url>http://ci.regularbox.com/plugin/repository/everything/</url -->
-		<ur>http://jenkins.zxda.net/job/Nukkit/lastSuccessfulBuild/maven-repository/repository/</url>
+		<url>http://jenkins.zxda.net/job/Nukkit/lastSuccessfulBuild/maven-repository/repository/</url>
         </repository>
     </repositories>
     
